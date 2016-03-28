@@ -1,0 +1,4 @@
+Yay, Java!
+
+compile: javac -cp lib/javax.json-api-1.0.jar Server.java
+run: DATABASE_URL="mysql://localhost/test?user=root&password=" java -cp .:lib/mysql-connector-java-5.1.38-bin.jar:lib/javax.json-1.0.4.jar Server
