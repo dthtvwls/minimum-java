@@ -10,7 +10,7 @@ public class Server {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
 
-        server.createContext("/").setHandler((httpExchange) -> {
+        server.createContext("/").setHandler(httpExchange -> {
             try {
                 PreparedStatement stmt = connection.prepareStatement("select ? success");
                 stmt.setBoolean(1, true);
